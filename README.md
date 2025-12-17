@@ -1,4 +1,4 @@
-\# 📚 코드 컨벤션 가이드 (Code Conventions Guide)
+# 📚 코드 컨벤션 가이드 (Code Conventions Guide)
 
 
 
@@ -12,23 +12,17 @@
 
 
 
-\## 📋 지원 언어
+## 📋 지원 언어
 
 
 
 | 언어 | 문서 | 기반 가이드라인 |
-
 |------|------|-----------------|
-
-| C# | \[csharp-convention.md](./CodeConvention/csharp-convention.md) | Microsoft 공식 가이드라인 |
-
-| Python | \[python-convention.md](./CodeConvention/python-convention.md) | PEP 8 스타일 가이드 |
-
-| Java | \[java-convention.md](./CodeConvention/java-convention.md) | Google Java Style Guide |
-
-| JavaScript | \[javascript-convention.md](./CodeConvention/javascript-convention.md) | Airbnb Style Guide |
-
-| TypeScript | \[typescript-convention.md](./CodeConvention/typescript-convention.md) | TypeScript 공식 핸드북 |
+| C# | [csharp-convention.md](./CodeConvention/csharp-convention.md) | Microsoft 공식 가이드라인 |
+| Python | [python-convention.md](./CodeConvention/python-convention.md) | PEP 8 스타일 가이드 |
+| Java | [java-convention.md](./CodeConvention/java-convention.md) | Google Java Style Guide |
+| JavaScript | [javascript-convention.md](./CodeConvention/javascript-convention.md) | Airbnb Style Guide |
+| TypeScript | [typescript-convention.md](./CodeConvention/typescript-convention.md) | TypeScript 공식 핸드북 |
 
 
 
@@ -36,7 +30,7 @@
 
 
 
-\## 🎯 공통 원칙
+## 🎯 공통 원칙
 
 
 
@@ -44,7 +38,7 @@
 
 
 
-\### 1. 가독성 우선
+### 1. 가독성 우선
 
 
 
@@ -58,31 +52,27 @@
 
 
 
-\### 2. 일관성 유지
+### 2. 일관성 유지
 
 
 
-\- 프로젝트 전체에서 동일한 스타일 유지
-
-\- 기존 코드베이스의 스타일을 따름
-
-\- 팀 내 합의된 규칙 준수
+- 프로젝트 전체에서 동일한 스타일 유지
+- 기존 코드베이스의 스타일을 따름
+- 팀 내 합의된 규칙 준수
 
 
 
-\### 3. 명확한 명명
+### 3. 명확한 명명
 
 
 
-\- 의미 있고 설명적인 이름 사용
-
-\- 축약어 사용 최소화
-
-\- 이름만으로 용도를 알 수 있게
+- 의미 있고 설명적인 이름 사용
+- 축약어 사용 최소화
+- 이름만으로 용도를 알 수 있게
 
 
 
-\### 4. 주석은 "왜"를 설명
+### 4. 주석은 "왜"를 설명
 
 
 
@@ -102,15 +92,13 @@ i = i + 1;  // 경계값 보정 (API는 0-based, DB는 1-based)
 
 
 
-\### 5. 단순함 추구
+### 5. 단순함 추구
 
 
 
-\- 복잡한 로직은 작은 함수로 분리
-
-\- 중첩은 최대 3-4단계까지
-
-\- 한 함수에 한 가지 책임
+- 복잡한 로직은 작은 함수로 분리
+- 중첩은 최대 3-4단계까지
+- 한 함수에 한 가지 책임
 
 
 
@@ -118,7 +106,7 @@ i = i + 1;  // 경계값 보정 (API는 0-based, DB는 1-based)
 
 
 
-\## 🛠️ 린터 및 포맷터 설정
+## 🛠️ 린터 및 포맷터 설정
 
 
 
@@ -127,26 +115,20 @@ i = i + 1;  // 경계값 보정 (API는 0-based, DB는 1-based)
 
 
 | 언어 | 린터 | 포맷터 |
-
 |------|------|--------|
-
 | C# | Roslyn Analyzers | dotnet format |
-
 | Python | Flake8, Pylint | Black, autopep8 |
-
 | Java | Checkstyle, PMD | google-java-format |
-
 | JavaScript | ESLint | Prettier |
-
 | TypeScript | ESLint + TypeScript | Prettier |
 
 
 
-\### 설정 파일 예시
+### 설정 파일 예시
 
 
 
-\#### ESLint (JavaScript/TypeScript)
+#### ESLint (JavaScript/TypeScript)
 
 
 
@@ -154,17 +136,17 @@ i = i + 1;  // 경계값 보정 (API는 0-based, DB는 1-based)
 
 {
 
-&nbsp; "extends": \["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
 
-&nbsp; "rules": {
+  "rules": {
 
-&nbsp;   "indent": \["error", 2],
+    "indent": ["error", 2],
 
-&nbsp;   "quotes": \["error", "single"],
+    "quotes": ["error", "single"],
 
-&nbsp;   "semi": \["error", "always"]
+    "semi": ["error", "always"]
 
-&nbsp; }
+  }
 
 }
 
@@ -172,7 +154,7 @@ i = i + 1;  // 경계값 보정 (API는 0-based, DB는 1-based)
 
 
 
-\#### .editorconfig (공통)
+#### .editorconfig (공통)
 
 
 
@@ -216,48 +198,35 @@ trim\_trailing\_whitespace = false
 
 
 
-\## 📖 언어별 빠른 참조
+## 📖 언어별 빠른 참조
 
 
 
-\### 명명 규칙 비교표
+### 명명 규칙 비교표
 
 
 
 | 대상 | C# | Python | Java | JavaScript/TypeScript |
-
 |------|-----|--------|------|----------------------|
-
 | 클래스 | PascalCase | PascalCase | PascalCase | PascalCase |
-
 | 함수/메서드 | PascalCase | snake\_case | camelCase | camelCase |
-
 | 변수 | camelCase | snake\_case | camelCase | camelCase |
-
 | 상수 | PascalCase | UPPER\_SNAKE | UPPER\_SNAKE | UPPER\_SNAKE |
-
 | private 필드 | \_camelCase | \_snake\_case | camelCase | \_camelCase / #private |
-
 | 인터페이스 | IName | - | Name | Name |
 
 
 
-\### 들여쓰기 비교
+### 들여쓰기 비교
 
 
 
 | 언어 | 권장 들여쓰기 |
-
 |------|--------------|
-
 | C# | 4 spaces |
-
 | Python | 4 spaces |
-
 | Java | 4 spaces (또는 2) |
-
 | JavaScript | 2 spaces |
-
 | TypeScript | 2 spaces |
 
 
@@ -266,14 +235,12 @@ trim\_trailing\_whitespace = false
 
 
 
-\## 📝 변경 이력
+## 📝 변경 이력
 
 
 
 | 날짜 | 내용 |
-
 |------|------|
-
 | 2025-12-17 | 초기 문서 생성 (C#, Python, Java, JavaScript, TypeScript) |
 
 
@@ -282,19 +249,15 @@ trim\_trailing\_whitespace = false
 
 
 
-\## 📚 외부 참고 자료
+## 📚 외부 참고 자료
 
 
 
-\- \*\*C#\*\*: \[Microsoft C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
-
-\- \*\*Python\*\*: \[PEP 8 Style Guide](https://peps.python.org/pep-0008/)
-
-\- \*\*Java\*\*: \[Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
-
-\- \*\*JavaScript\*\*: \[Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
-
-\- \*\*TypeScript\*\*: \[TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/)
+- **C#**: [Microsoft C# Coding Conventions](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)
+- **Python**: [PEP 8 Style Guide](https://peps.python.org/pep-0008/)
+- **Java**: [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+- **JavaScript**: [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+- **TypeScript**: [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/)
 
 
 
@@ -302,7 +265,7 @@ trim\_trailing\_whitespace = false
 
 
 
-\*마지막 업데이트: 2025년 12월\*
+*마지막 업데이트: 2025년 12월*
 
 
 
